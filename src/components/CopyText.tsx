@@ -25,7 +25,6 @@ class CopyText extends React.PureComponent<CopyTextProps, CopyTextState> {
     isCopy: false
   };
   clickToCopy = () => {
-    console.log('run');
     try {
       const el = document.createElement('textarea');
       el.value = this.props.text;

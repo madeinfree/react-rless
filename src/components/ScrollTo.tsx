@@ -1,12 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export type ScrollToMacroProps = {
+type ScrollToMacroProps = {
   windowScroll?: boolean;
   scrollById?: string;
   children(macro: { scrollToElement(target: string): void }): React.ReactNode;
 };
+
 class ScrollTo extends React.PureComponent<ScrollToMacroProps> {
   requestFrameID: number;
+  static displayName = 'ScrollTo';
+  static propTypes = {
+    windowScroll: PropTypes.bool,
+    scrollById: PropTypes.string,
+    children: PropTypes.func.isRequired
+  };
   componentDidMount() {
     window.addEventListener('wheel', this.onMouseWheel);
   }
