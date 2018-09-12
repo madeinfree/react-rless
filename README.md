@@ -1,4 +1,4 @@
-# React Dropdown Composition
+# React Copy Text Macro
 
 Easily to make your button copy input happened. ✍️✍️✍️
 
