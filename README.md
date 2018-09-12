@@ -1,4 +1,4 @@
-# React Copy Text Macro
+# React Rless
 
 Easily to make your custom component happened with renderless component and do somting powerful. ✍️✍️✍️
 
