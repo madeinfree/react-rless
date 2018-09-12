@@ -2,6 +2,7 @@ import React from 'react';
 
 export class CopyText extends React.PureComponent<
   {
+    text: string;
     callback?(err: string, text: string): void;
     children(macro: {
       onClickToCopy(): void;
