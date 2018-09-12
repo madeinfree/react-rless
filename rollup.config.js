@@ -7,7 +7,7 @@ export default {
     file: 'index.js',
     format: 'cjs'
   },
-  external: ['react', 'prop-types'],
+  external: ['react'],
   plugins: [
     typescript({
       tsconfig: './tsconfig.json'

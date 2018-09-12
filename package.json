@@ -1,5 +1,5 @@
 {
-  "name": "react-copy-text-macro",
+  "name": "react-rless",
   "version": "0.1.0",
   "main": "dist/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "url": "https://www.facebook.com/haowei.liou"
   },
   "repository": {
-    "url": "https://github.com/madeinfree/react-copy-text-macro"
+    "url": "https://github.com/madeinfree/react-rless"
   },
   "files": [
     "dist",
@@ -27,6 +27,7 @@
   "license": "MIT",
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-info": "^3.4.10",
     "@storybook/addon-links": "^3.4.10",
     "@storybook/addons": "^3.4.10",
     "@storybook/react": "4.0.0-alpha.3",
@@ -39,6 +40,7 @@
     "@types/react-dom": "^16.0.6",
     "@types/react-test-renderer": "^16.0.1",
     "@types/storybook__addon-actions": "^3.4.1",
+    "@types/storybook__addon-info": "^3.4.1",
     "@types/storybook__react": "^3.0.9",
     "awesome-typescript-loader": "^5.2.0",
     "babel-core": "^6.26.3",
