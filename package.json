@@ -65,7 +65,8 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "prop-types": "^15.6.2"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
