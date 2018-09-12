@@ -2,13 +2,18 @@ import React from 'react';
 
 export class CopyText extends React.PureComponent<
   {
-    text: string;
-    callback?(err: string | null, text: string | null): void;
-    children(props: { onClickToCopy(): void; onBackToUncopy(): void; isCopy: boolean }): void;
+    callback?(err: string, text: string): void;
+    children(macro: {
+      onClickToCopy(): void;
+      onBackToUncopy(): void;
+      isCopy: boolean;
+    }): React.ReactNode;
   },
   { isCopy: boolean }
 > {}
 
 export class ScrollTo extends React.PureComponent<{
-  children(props: { scrollToElement(target: string): void }): void;
+  windowScroll?: boolean;
+  scrollById?: string;
+  children(macro: { scrollToElement(target: string): void }): React.ReactNode;
 }> {}
