@@ -1,7 +1,8 @@
 {
   "name": "react-rless",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "yarn jest",
     "prettier": "sh ./scripts/prettier.sh",
@@ -22,6 +23,7 @@
   },
   "files": [
     "dist",
+    "types",
     "README.md"
   ],
   "license": "MIT",
