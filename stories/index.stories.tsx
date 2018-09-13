@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { CopyText, ScrollTo } from '../src';
+import { CopyText, ScrollTo, Interval } from '../src';
 
 storiesOf('React Renderless', module)
   .add('Copy Text', () => (
@@ -46,4 +46,13 @@ storiesOf('React Renderless', module)
         </div>
       )}
     </ScrollTo>
+  ))
+  .add('Interval', () => (
+    <Interval>
+      {({ timerID }) => (
+        <h1 style={{ textAlign: 'center' }}>
+          TimerID: [{timerID || 0}] {new Date().toString()}
+        </h1>
+      )}
+    </Interval>
   ));

@@ -18,3 +18,8 @@ export class ScrollTo extends React.PureComponent<{
   scrollById?: string;
   children(macro: { scrollToElement(target: string): void }): React.ReactNode;
 }> {}
+
+export class Interval extends React.Component<{
+  children(props: { timerID: NodeJS.Timer | number }): React.ReactNode;
+  timeout?: number;
+}> {}

@@ -70,6 +70,23 @@ import { ScrollTo } from 'react-rless'
 </ScrollTo>
 ```
 
+## \<Interval>
+
+Interval component help to re-render the component by native interval timer, but you should be careful because it use the forceUpdate to re-render component, so don't use it on heavy render work.
+
+ex: when we want to countdown the timer, it can be helpful to re-render stateless component.
+
+```jsx
+import { Interval } from 'react-rless'
+<Interval>
+  {({ timerID }) => (
+    <h1 style={{ textAlign: 'center' }}>
+      TimerID: [{timerID || 0}] {new Date().toString()}
+    </h1>
+  )}
+</Interval>
+```
+
 ## License
 
 MIT
