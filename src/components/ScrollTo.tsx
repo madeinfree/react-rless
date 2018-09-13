@@ -46,7 +46,7 @@ class ScrollTo extends React.PureComponent<ScrollToMacroProps> {
       };
       this.requestFrameID = requestAnimationFrame(scrollFrame);
     } else {
-      throw new Error('Can\'t find target element');
+      throw new Error('Cant find target element');
     }
   };
   render() {

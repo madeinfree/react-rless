@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 type IntervalProps = {
-  children(props: { timerID: NodeJS.Timer | number }): React.ReactNode;
+  children(props: { timerID: NodeJS.Timer | number; start(): void; stop(): void }): React.ReactNode;
   timeout?: number;
 };
 
@@ -16,20 +16,38 @@ class Interval extends React.Component<IntervalProps> {
     timeout: PropTypes.number
   };
   timer: NodeJS.Timer | number;
-  start = () => {
+  update = () => {
     this.forceUpdate();
   };
-  componentDidMount() {
-    this.timer = setInterval(this.start, this.props.timeout || 1000);
-  }
-  componentWillUnmount() {
+  start = () => {
+    if (!this.timer) {
+      this.createTimer();
+    } else {
+      console.error(
+        'The timer is exists, you possesses one timer in the same time, you should call stop() before create new timer.'
+      );
+    }
+  };
+  stop = () => {
     if (this.timer) {
       clearInterval(this.timer as number);
+      this.timer = null;
     }
+  };
+  createTimer = () => {
+    this.timer = setInterval(this.update, this.props.timeout || 1000);
+  };
+  componentDidMount() {
+    this.createTimer();
+  }
+  componentWillUnmount() {
+    this.stop();
   }
   render() {
     return this.props.children({
-      timerID: this.timer
+      timerID: this.timer,
+      start: this.start,
+      stop: this.stop
     });
   }
 }

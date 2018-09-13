@@ -49,10 +49,14 @@ storiesOf('React Renderless', module)
   ))
   .add('Interval', () => (
     <Interval>
-      {({ timerID }) => (
-        <h1 style={{ textAlign: 'center' }}>
-          TimerID: [{timerID || 0}] {new Date().toString()}
-        </h1>
+      {({ timerID, start, stop }) => (
+        <div>
+          <h1 style={{ textAlign: 'center' }}>
+            TimerID: [{timerID || 0}] {new Date().toString()}
+          </h1>
+          <button onClick={() => start()}>Start</button>
+          <button onClick={() => stop()}>Stop</button>
+        </div>
       )}
     </Interval>
   ));
