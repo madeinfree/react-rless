@@ -16,7 +16,7 @@
     "noImplicitAny": true,
     // "strictNullChecks": true,
     // for the jest test environment
-    // "esModuleInterop": true,
+    "esModuleInterop": true,
     // common typescript bundle import environment
     "allowSyntheticDefaultImports": true
   },

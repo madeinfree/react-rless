@@ -8,3 +8,4 @@ const doc = win.document;
 global.window = win;
 global.navigator = window.navigator;
 global.document = doc;
+global.requestAnimationFrame = setImmediate;

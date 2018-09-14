@@ -59,6 +59,7 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-test-renderer": "^16.4.2",
+    "react-testing-library": "^5.0.1",
     "rollup": "^0.65.0",
     "rollup-plugin-typescript": "^0.8.1",
     "ts-jest": "^23.1.4",
@@ -67,8 +68,8 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "^16.0.0",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "react": "^16.0.0"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
